@@ -264,18 +264,19 @@ export default {
   text-decoration: none;
 }
 .poss {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 192px;
 }
 .poss1 {
   position: relative;
+  top:0;
   width: 100%;
   background-color: red;
   z-index: 9;
 }
 .linkstyle {
-  inline-size: 150px;
+  inline-size: 100px;
   overflow: hidden;
   color: white;
   font-size: 16px;

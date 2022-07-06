@@ -10,15 +10,16 @@
       ></v-row
     >
     <v-row no-gutters :class="[show == 'tow' ? 'reverscol' : '']">
-      <v-col cols="6">
+      <v-col cols="12" md="6">
         <v-card class="mx-auto" max-width="500" elevation="0">
           <v-list flat :class="[show == 'one' ? 'backcolor' : '']">
             <v-list-item-group v-model="model">
               <v-list-item
-                class="noexpantion"
+                class="noexpantion d-md-flex"
                 active-class="active"
                 v-for="(item, i) in items"
                 :key="i"
+                :class="{ 'hidden-sm-and-down': model !== i }"
               >
                 <v-list-item-icon>
                   <v-icon v-text="item.icon"></v-icon>
@@ -38,7 +39,7 @@
           </v-list>
         </v-card>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" md="6">
         <v-card elevation="0" color=" transparent">
           <v-img
             max-height="60rem"
@@ -74,7 +75,8 @@ export default {
   background-color: #eec6ca;
 }
 .reverscol {
-  display: flex;padding:0 4rem ;
+  display: flex;
+  padding: 0 4rem;
   flex-direction: row-reverse;
 }
 .text1 {

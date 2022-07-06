@@ -126,12 +126,7 @@ export default {
   background-color: transparent;
   border-radius: 20%;
 }
-.bg {
-  background-color: red;
-}
-.bg1 {
-  background-color: rgb(34, 0, 255);
-}
+
 .pad {
   padding-top: 5rem;
   padding-bottom: 10rem;

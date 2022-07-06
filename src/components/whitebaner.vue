@@ -1,23 +1,23 @@
 <template>
   <v-card >
-    <v-row no-gutters>
+    <v-row no-gutters class="mtt">
     <v-spacer></v-spacer>
-      <v-col cols="3"
-        ><v-card class="pos" elevation="0">
+      <v-col cols="12" md="3" class=""
+        ><v-card  class='pos '  elevation="0">
           <div class="circle">3minutes</div>
           <p class="sub">to create and send a signature request</p></v-card
         ></v-col
       >
-      <v-col cols="3" 
-        ><v-card class="pos" elevation="0">
+      <v-col cols="12" md="3" 
+        ><v-card  class='pos' elevation="0">
           <div class="circle1">45%</div>
           <p class="sub">
             increase in conversion on digitalized signature journeys
           </p></v-card
         ></v-col
       >
-      <v-col cols="3" 
-        ><v-card class="pos" elevation="0">
+      <v-col cols="12" md="3" 
+        ><v-card  class='pos' elevation="0">
           <div class="circle2">100%</div>
           <p class="sub">eIDAS and RGPD compliant</p></v-card
         ></v-col
@@ -38,11 +38,10 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Joan&display=swap");
 .pos {
   font-family: "joan";
-  margin-top: 15rem;
-  text-align: center;
+  text-align: center; 
   font-size: 3.5rem;
   font-weight: bold;
-}
+}.mtt{padding-top:16rem;}
 .sub {
   font-size: 1.5rem;
   font-weight: lighter;
