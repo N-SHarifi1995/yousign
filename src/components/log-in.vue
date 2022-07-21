@@ -1,14 +1,45 @@
 <template>
- 
- <div ><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p><p>ddddddddddddddddd</p></div>
+  <div class="flexbox">
+    <login-form
+      :type="logIn.type"
+      :message="logIn.message"
+      :switchform="logIn.switch"
+      :submit="login"
+    ></login-form>
+  </div>
 </template>
 
 <script>
+import loginForm from "./form.vue";
 export default {
-name:'log-in'
-}
+  name: "log-in",
+  components: { loginForm },
+  data() {
+    return {
+      logIn: { type: "login", message: "Welcome!", switch: "signup" },
+    };
+  },
+  methods: {
+   async login(eml) {
+      
+      let user = await this.$store.dispatch("login", eml);
+     console.log(user)
+      if(user.error){
+        alert('smt went wrong')
+      }else{
+       alert('welcome')  
+      }
+    },
+  },
+};
 </script>
 
-<style>
-
+<style scoped>
+.flexbox {
+  height: 80vh;
+  background: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-card class="pinkcard">
+  <v-card class="pinkcard mt-xs-16 mt-sm-16">
     <v-row>
       <v-col cols="12" class="" >
         <p class="text-center">More than 10 000 beloved customers in Europ</p>
@@ -10,18 +10,19 @@
         </div>
       </v-col>
     </v-row>
-<!-- <v-row class="imgpart mt-5 mb-5">
-<v-spacer></v-spacer>
-<v-col class="imgpart"  >
- <v-img :src="srce" v-for="srce in imgbox" :key="srce"></v-img>
- </v-col>
- <v-spacer></v-spacer>
-</v-row> -->
-    <v-list class="imgpart mt-6" >
+    <!-- <v-list class="imgpart mt-6" >
       <v-list-item class="imgset" v-for="srce in imgbox" :key="srce">
         <v-img :src="srce"></v-img>
       </v-list-item>
-    </v-list> 
+    </v-list>  -->
+<v-row>
+<v-spacer ></v-spacer>
+<v-col cols="2" sm="1" md="1" class="" v-for="srce in imgbox" :key="srce">
+ <v-img :src="srce" class="mt-5 "></v-img>
+</v-col>
+<v-spacer  ></v-spacer>
+</v-row>
+    
   </v-card>
 </template>
 
@@ -52,15 +53,18 @@ export default {
   width: 80vw;
   border-radius: 20px;
   background-color: #ffcccc;
-  position: absolute;
+  position:absolute;
   bottom: -18vh;
+  max-height: 600px;
+  
+  
  font-size: 25px;
   font-family: "joan";
   z-index: 7;padding: 2rem 0;
 }
 .imgset {
   max-width: 120px;
-  max-height: 80px;
+  max-height: 100px;
 }
 .imgpart {
   display: flex;flex-wrap: wrap;

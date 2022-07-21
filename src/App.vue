@@ -1,6 +1,6 @@
 <template>
   <v-app class="overflow-hidden">
-  <v-card >
+ 
   <appBar ></appBar>
     <v-sheet
       id="scrolling-techniques-3"
@@ -12,7 +12,7 @@
       <v-main >
         <router-view ></router-view>
       </v-main>
-    </v-sheet></v-card>
+    </v-sheet>
     
   </v-app>
 </template>
