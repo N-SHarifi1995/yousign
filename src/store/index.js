@@ -22,10 +22,26 @@ export default new Vuex.Store({
           console.log(currentuser);
           return currentuser;
         }
-      
       } catch (error) {
         console.error(error);
-        return {error};
+        return { error };
+      }
+
+      // Sincere@april.biz
+    },
+    async signup({ commit }, email) {
+      try {
+        let response = await api().post("/users", email);
+        let newUser = response.data;
+        console.log(newUser);
+        if (200<=response.status<=202) {
+          commit("log_in", newUser);
+
+          return newUser;
+        }
+      } catch (error) {
+        console.error(error);
+        return { error };
       }
 
       // Sincere@april.biz
