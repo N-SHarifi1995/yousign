@@ -4,11 +4,17 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 import api from "../services/api";
 export default new Vuex.Store({
-  state: { users: [] },
+  state: { user: {} },
   getters: {},
   mutations: {
-    log_in(state, users) {
-      state.users = users;
+    log_in(state, user) {
+      state.user = user;
+      window.localStorage.currentuser=JSON.stringify(user);
+      console.log(state.user)
+    },log_out(state) {
+      state.user = {};
+      window.localStorage.currentuser=JSON.stringify({});
+     
     },
   },
   actions: {
@@ -46,6 +52,15 @@ export default new Vuex.Store({
 
       // Sincere@april.biz
     },
+    loaduser({commit}){
+      let user = JSON.parse(window.localStorage.currentuser);
+      console.log(user)
+      commit('log_in', user)
+    },
+    logout({commit}){
+     
+      commit('log_out')
+    }
   },
 
   modules: {},

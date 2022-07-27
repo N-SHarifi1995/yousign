@@ -27,7 +27,8 @@ export default {
       if(user.error){
         alert('smt went wrong')
       }else{
-       alert('welcome')  
+       alert('welcome')
+       this.$router.push({ name: 'home' })  
       }
     },
   },
@@ -41,5 +42,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 </style>

@@ -34,14 +34,7 @@ export default {
        alert('welcome')  
       }
     },
-    // async signUp(eml) {
-    //   let res = await this.$store.dispatch("signup",);
-    //    if(res.error){
-    //     alert('smt went wrong')
-    //   }else{
-    //    alert('welcome')  
-    //   }
-    // },
+    
   },
 };
 </script>
@@ -53,5 +46,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 </style>
