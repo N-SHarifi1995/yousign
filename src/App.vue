@@ -2,6 +2,7 @@
   <v-app class="overflow-hidden">
     <appBar v-if="routePath"></appBar>
     <v-sheet
+    
       id="scrolling-techniques-3"
       class="overflow-y-auto"
       max-height="100vh"
@@ -38,7 +39,7 @@ export default {
   computed: {
     routePath() {
       let pathe = this.$route.name;
-      if (pathe == "login" || pathe == "signup") {
+      if (pathe == "login" || pathe == "signup"|| pathe == "workspace") {
         return false;
       } else {
         return true;
