@@ -22,7 +22,7 @@ const routes = [{
         name: 'signup',
         component: signup
     },{
-        path: '/workspace',
+        path: '/workspace/:user',
         name: 'workspace',
         component: workspace
     },

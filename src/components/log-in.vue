@@ -1,11 +1,6 @@
 <template>
   <div class="flexbox">
-    <login-form
-      :type="logIn.type"
-      :message="logIn.message"
-      :switchform="logIn.switch"
-      :submit="login"
-    ></login-form>
+    <login-form :type="logIn.type" :message="logIn.message" :switchform="logIn.switch" :submit="login"></login-form>
   </div>
 </template>
 
@@ -20,15 +15,15 @@ export default {
     };
   },
   methods: {
-   async login(eml) {
-      
+    async login(eml) {
+
       let user = await this.$store.dispatch("login", eml);
-     console.log(user)
-      if(user.error){
+      console.log(user)
+      if (user.error) {
         alert('smt went wrong')
-      }else{
-       alert('welcome')
-       this.$router.push({ name: 'home' })  
+      } else {
+        alert('welcome')
+        this.$router.push({ name: 'workspace',params: { user: user.username } })
       }
     },
   },
